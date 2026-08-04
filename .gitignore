@@ -27,4 +27,4 @@ next-env.d.ts
 # local tooling / scratch (not part of the project)
 /_tools/
 /_handoff/
-/.claude/launch.json
+/.claude/
