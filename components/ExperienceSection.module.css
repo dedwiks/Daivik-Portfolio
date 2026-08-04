@@ -1,0 +1,53 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: clamp(15px, 1.6vw, 20px);
+  margin-bottom: var(--gap-sm);
+}
+
+.subLabel {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.subLabelSpaced {
+  composes: subLabel;
+  margin-top: 32px;
+}
+
+.closingBorder {
+  border-top: 2px solid var(--color-black);
+}
+
+.eduRow {
+  display: grid;
+  grid-template-columns: min(220px, 32%) 1fr;
+  gap: 16px;
+  border-top: 2px solid var(--color-black);
+  padding: clamp(16px, 2vw, 24px) 0;
+}
+
+.eduDates {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.eduRole {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2vw, 24px);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.eduInstitution {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 4px 0 0;
+}

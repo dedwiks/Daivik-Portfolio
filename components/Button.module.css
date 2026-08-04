@@ -1,0 +1,49 @@
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 12px 22px;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.large {
+  padding: 16px 28px;
+}
+
+.filled {
+  background: var(--color-black);
+  color: var(--color-yellow);
+}
+
+.filled:hover {
+  opacity: 0.85;
+}
+
+.filled:active {
+  transform: scale(0.96);
+  opacity: 0.7;
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-black);
+}
+
+.outline:hover {
+  background: var(--color-black);
+  color: var(--color-yellow);
+}
+
+.outline:active {
+  transform: scale(0.96);
+  background: var(--color-black);
+  color: var(--color-yellow);
+}

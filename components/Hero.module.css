@@ -1,0 +1,66 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: clamp(13px, 1.4vw, 16px);
+  letter-spacing: 0.03em;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 9vw, 128px);
+  line-height: 0.98;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 2px solid var(--color-black);
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: clamp(12px, 1.3vw, 15px);
+  letter-spacing: 0.03em;
+}
+
+.bio {
+  font-size: clamp(15px, 1.6vw, 19px);
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.log {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.85;
+}

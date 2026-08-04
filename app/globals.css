@@ -1,0 +1,49 @@
+:root {
+  --color-black: #000000;
+  --color-yellow: #ffc400;
+  --color-orange-yellow: #ff9a1e;
+  --color-orange-yellow-2: #ffb000;
+  --color-orange: #ff7a1a;
+  --color-red-orange: #ff5e3a;
+
+  --grad-hero: linear-gradient(135deg, #ffc400 0%, #ff9a1e 55%, #ff7a1a 100%);
+  --grad-projects: linear-gradient(135deg, #ff9a1e 0%, #ff7a1a 55%, #ff5e3a 100%);
+  --grad-experience: linear-gradient(135deg, #ffc400 0%, #ffb000 55%, #ff9a1e 100%);
+  --grad-skills: linear-gradient(135deg, #ff9a1e 0%, #ff7a1a 55%, #ff5e3a 100%);
+  --grad-contact: linear-gradient(135deg, #ff9a1e 0%, #ff7a1a 45%, #ff5e3a 100%);
+
+  --section-padding: clamp(24px, 4vw, 56px);
+  --gap-sm: clamp(20px, 3vw, 36px);
+  --gap-lg: clamp(28px, 4vw, 48px);
+  --rail-width: min(90px, 9vw);
+
+  --font-display: var(--font-archivo-black), sans-serif;
+  --font-body: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-black);
+  color: var(--color-black);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

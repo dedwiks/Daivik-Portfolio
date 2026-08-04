@@ -1,0 +1,12 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: clamp(15px, 1.6vw, 20px);
+  margin-bottom: var(--gap-sm);
+}
+
+.closingBorder {
+  border-top: 2px solid var(--color-black);
+}

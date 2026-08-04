@@ -1,0 +1,32 @@
+.row {
+  display: grid;
+  grid-template-columns: min(220px, 32%) 1fr;
+  gap: 16px;
+  border-top: 2px solid var(--color-black);
+  padding: clamp(16px, 2vw, 24px) 0;
+}
+
+.dates {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2vw, 24px);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.company {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 4px 0 8px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 640px;
+}
