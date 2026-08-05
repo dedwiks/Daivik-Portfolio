@@ -27,7 +27,9 @@
 
 .links {
   display: flex;
+  align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .link {
@@ -45,3 +47,24 @@
   color: var(--color-yellow);
   border-bottom: 2px solid var(--color-yellow);
 }
+
+.paletteTrigger {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--color-yellow);
+  background: transparent;
+  border: 2px solid var(--color-yellow);
+  padding: 4px 8px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.paletteTrigger:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
+}
+

@@ -1,0 +1,6 @@
+.stats {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.7;
+}

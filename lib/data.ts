@@ -19,6 +19,9 @@ export type Project = {
   tags: string;
   year: string;
   link: string;
+  owner: string;
+  repo: string;
+  blurb: string;
 };
 
 export const projects: Project[] = [
@@ -27,18 +30,30 @@ export const projects: Project[] = [
     tags: "LOGISTIC REGRESSION / SHAP / LIME",
     year: "2024",
     link: "https://github.com/dedwiks/Liver-disease-prediction",
+    owner: "dedwiks",
+    repo: "Liver-disease-prediction",
+    blurb:
+      "A logistic regression classifier for predicting liver disease from patient lab data, with SHAP and LIME layered on top to explain individual predictions rather than treat the model as a black box. Built to see how far interpretability tooling can go on top of a simple, auditable baseline.",
   },
   {
     name: "REAL-TIME CHAT APPLICATION",
     tags: "REACT / SOCKET.IO / SUPABASE",
     year: "2025",
     link: "https://github.com/dedwiks/websocket_chat",
+    owner: "dedwiks",
+    repo: "websocket_chat",
+    blurb:
+      "A real-time messaging app built on React and Socket.IO for low-latency bidirectional communication, with Supabase handling auth, persistence, and presence. Focused on getting message delivery, typing indicators, and reconnection handling right under real network conditions.",
   },
   {
     name: "MOLECULAR TOXICITY PREDICTION",
     tags: "TRANSFORMER / STREAMLIT / TOX21",
     year: "2025",
     link: "https://github.com/dedwiks/toxicity-prediction-app",
+    owner: "dedwiks",
+    repo: "toxicity-prediction-app",
+    blurb:
+      "A transformer-based model for predicting molecular toxicity on the Tox21 benchmark, wrapped in a Streamlit interface so predictions can be inspected interactively instead of only from a notebook. Explores mechanistic interpretability — attributing predictions back to molecular substructure rather than treating the model as opaque.",
   },
 ];
 

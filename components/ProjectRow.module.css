@@ -1,14 +1,22 @@
+.wrap {
+  border-top: 2px solid var(--color-black);
+}
+
 .row {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 12px;
-  border-top: 2px solid var(--color-black);
-  padding: clamp(18px, 2.5vw, 28px) 0;
-  text-decoration: none;
-  color: var(--color-black);
-  transform: scale(1);
+  width: 100%;
+  border: none;
   background: transparent;
+  padding: clamp(18px, 2.5vw, 28px) 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-black);
+  font: inherit;
+  transform: scale(1);
   box-shadow: none;
   transition:
     transform 0.2s ease,
@@ -38,7 +46,7 @@
 .meta {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .tagsCol {
@@ -62,19 +70,96 @@
   opacity: 0.7;
 }
 
-.arrow {
+.indicator {
+  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 700;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  width: 22px;
+  text-align: center;
+  transition: transform 0.25s ease;
 }
 
-.row:hover .arrow {
-  opacity: 1;
-  transform: translateX(0);
+.indicatorOpen {
+  transform: rotate(45deg);
+}
+
+.expandOuter {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.expandOuterOpen {
+  grid-template-rows: 1fr;
+}
+
+.expandInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.expandContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 clamp(18px, 2.5vw, 28px);
+}
+
+.blurb {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techChip {
+  border: 2px solid var(--color-black);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.expandFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.viewLink {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--color-black);
+  padding: 8px 16px;
+  color: var(--color-black);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.viewLink:hover {
+  background: var(--color-black);
+  color: var(--color-yellow);
+}
+
+.viewLink:active {
+  transform: scale(0.96);
+  background: var(--color-black);
+  color: var(--color-yellow);
 }

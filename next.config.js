@@ -21,6 +21,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Lets client code (e.g. the command palette's resume download, triggered
+  // from any route) build a correct absolute URL regardless of basePath.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 module.exports = nextConfig;

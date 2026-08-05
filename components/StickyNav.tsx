@@ -20,6 +20,14 @@ export default function StickyNav() {
             {item.label}
           </a>
         ))}
+        <button
+          type="button"
+          className={styles.paletteTrigger}
+          onClick={() => window.dispatchEvent(new Event("open-command-palette"))}
+          aria-label="Open command palette"
+        >
+          ⌘K
+        </button>
       </div>
     </div>
   );

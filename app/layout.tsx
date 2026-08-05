@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import CommandPalette from "@/components/CommandPalette";
 import "./globals.css";
 
 const archivoBlack = Archivo_Black({
@@ -32,7 +33,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${archivoBlack.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CommandPalette />
+      </body>
     </html>
   );
 }
