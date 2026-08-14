@@ -17,6 +17,7 @@ export const navObservedSectionIds = navItems.map((n) => n.id);
 export type Project = {
   name: string;
   tags: string;
+  stack: string[];
   year: string;
   link: string;
   owner: string;
@@ -26,8 +27,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "BLOGSITE",
+    tags: "MICROSERVICES / KUBERNETES / RABBITMQ",
+    stack: [
+      "Node.js/TypeScript",
+      "Python/FastAPI",
+      "Go",
+      "PostgreSQL",
+      "RabbitMQ",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "Prometheus/Grafana",
+      "OpenTelemetry/Jaeger",
+      "GitHub Actions",
+    ],
+    year: "2026",
+    link: "https://github.com/dedwiks/blogsite",
+    owner: "dedwiks",
+    repo: "blogsite",
+    blurb:
+      "A distributed blogging platform built to exercise production backend patterns rather than another CRUD app — four independently deployable services (Node/Express, two Python/FastAPI services, Go) behind an Nginx gateway, each owning its own database. Services communicate synchronously over HTTP and asynchronously through RabbitMQ via a transactional outbox with idempotent consumers, with full observability — OpenTelemetry/Jaeger tracing, Prometheus/Grafana metrics — and Redis caching, all deployed to Kubernetes (kind) with RBAC-scoped service discovery and Ingress routing.",
+  },
+  {
     name: "LIVER DISEASE PREDICTION MODEL",
     tags: "LOGISTIC REGRESSION / SHAP / LIME",
+    stack: ["Logistic Regression", "SHAP", "LIME"],
     year: "2024",
     link: "https://github.com/dedwiks/Liver-disease-prediction",
     owner: "dedwiks",
@@ -38,6 +63,7 @@ export const projects: Project[] = [
   {
     name: "REAL-TIME CHAT APPLICATION",
     tags: "REACT / SOCKET.IO / SUPABASE",
+    stack: ["React", "Socket.IO", "Supabase"],
     year: "2025",
     link: "https://github.com/dedwiks/websocket_chat",
     owner: "dedwiks",
@@ -48,6 +74,7 @@ export const projects: Project[] = [
   {
     name: "MOLECULAR TOXICITY PREDICTION",
     tags: "TRANSFORMER / STREAMLIT / TOX21",
+    stack: ["Transformer", "Streamlit", "Tox21"],
     year: "2025",
     link: "https://github.com/dedwiks/toxicity-prediction-app",
     owner: "dedwiks",

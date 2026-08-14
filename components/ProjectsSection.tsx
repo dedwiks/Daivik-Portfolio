@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       gradient="var(--grad-projects)"
       rail={[
         { text: "CATALOGUE:", muted: true },
-        { text: "03 SELECTED", strong: true },
+        { text: `${String(projects.length).padStart(2, "0")} SELECTED`, strong: true },
         { text: "YEAR:", muted: true },
         { text: "2024—2026", strong: true },
       ]}

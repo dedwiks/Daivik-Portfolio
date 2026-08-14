@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import type { Project } from "@/lib/data";
+import { useMagnetic } from "@/hooks/useMagnetic";
 import RepoStats from "./RepoStats";
 import styles from "./ProjectRow.module.css";
 
 export default function ProjectRow({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
-  const techTags = project.tags.split(" / ");
+  const viewLinkRef = useMagnetic<HTMLAnchorElement>();
 
   return (
     <div className={styles.wrap}>
@@ -29,7 +30,7 @@ export default function ProjectRow({ project }: { project: Project }) {
           <div className={styles.expandContent}>
             <p className={styles.blurb}>{project.blurb}</p>
             <div className={styles.techRow}>
-              {techTags.map((tag) => (
+              {project.stack.map((tag) => (
                 <span key={tag} className={styles.techChip}>
                   {tag}
                 </span>
@@ -37,7 +38,13 @@ export default function ProjectRow({ project }: { project: Project }) {
             </div>
             <div className={styles.expandFooter}>
               <RepoStats owner={project.owner} repo={project.repo} />
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.viewLink}>
+              <a
+                ref={viewLinkRef}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.viewLink}
+              >
                 VIEW ON GITHUB →
               </a>
             </div>
