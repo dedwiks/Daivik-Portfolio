@@ -2,14 +2,11 @@
 
 import { useState } from "react";
 import type { Project } from "@/lib/data";
-import { useMagnetic } from "@/hooks/useMagnetic";
 import RepoStats from "./RepoStats";
 import styles from "./ProjectRow.module.css";
 
 export default function ProjectRow({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
-  const viewLinkRef = useMagnetic<HTMLAnchorElement>();
-  const liveLinkRef = useMagnetic<HTMLAnchorElement>();
 
   return (
     <div className={styles.wrap}>
@@ -42,7 +39,6 @@ export default function ProjectRow({ project }: { project: Project }) {
               <div className={styles.linkGroup}>
                 {project.liveUrl && (
                   <a
-                    ref={liveLinkRef}
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -51,13 +47,7 @@ export default function ProjectRow({ project }: { project: Project }) {
                     VIEW LIVE →
                   </a>
                 )}
-                <a
-                  ref={viewLinkRef}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.viewLink}
-                >
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.viewLink}>
                   VIEW ON GITHUB →
                 </a>
               </div>
