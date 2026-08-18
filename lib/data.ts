@@ -20,12 +20,25 @@ export type Project = {
   stack: string[];
   year: string;
   link: string;
+  liveUrl?: string;
   owner: string;
   repo: string;
   blurb: string;
 };
 
 export const projects: Project[] = [
+  {
+    name: "DEVCOMPASS AI",
+    tags: "REACT / NODE.JS / GEMINI API",
+    stack: ["React (Vite)", "Node.js/Express", "MongoDB Atlas", "Google Gemini API", "GitHub REST API"],
+    year: "2026",
+    link: "https://github.com/dedwiks/DevCompass",
+    liveUrl: "https://dev-compass-kzed.vercel.app/",
+    owner: "dedwiks",
+    repo: "DevCompass",
+    blurb:
+      "AI-generated engineering standups from real GitHub activity — point it at a repo and it pulls commits, pull requests, and issues over a chosen time window, then has an LLM synthesize what shipped, what's in flight, and what's stuck, instead of reconstructing the week from memory. Built as a full MERN app with production-minded details: a fail-fast database guard, strict-schema parsing of the LLM's output with a graceful fallback when it misbehaves, locked-down CORS, and rate limiting on the AI-calling endpoint. The model is explicitly instructed never to invent activity beyond what's actually fetched from GitHub.",
+  },
   {
     name: "BLOGSITE",
     tags: "MICROSERVICES / KUBERNETES / RABBITMQ",

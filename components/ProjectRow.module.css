@@ -138,6 +138,13 @@
   gap: 12px;
 }
 
+.linkGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .viewLink {
   display: inline-block;
   font-family: var(--font-mono);
