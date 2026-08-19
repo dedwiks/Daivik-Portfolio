@@ -40,6 +40,18 @@ export const projects: Project[] = [
       "AI-generated engineering standups from real GitHub activity — point it at a repo and it pulls commits, pull requests, and issues over a chosen time window, then has an LLM synthesize what shipped, what's in flight, and what's stuck, instead of reconstructing the week from memory. Built as a full MERN app with production-minded details: a fail-fast database guard, strict-schema parsing of the LLM's output with a graceful fallback when it misbehaves, locked-down CORS, and rate limiting on the AI-calling endpoint. The model is explicitly instructed never to invent activity beyond what's actually fetched from GitHub.",
   },
   {
+    name: "TASKIT",
+    tags: "SLACK BOLT / NODE.JS / GEMINI API",
+    stack: ["Slack Bolt SDK", "Node.js/Express", "MongoDB Atlas", "Google Gemini API", "GitHub REST API", "React (Vite)"],
+    year: "2026",
+    link: "https://github.com/dedwiks/TaskIt",
+    liveUrl: "https://task-it-three.vercel.app/",
+    owner: "dedwiks",
+    repo: "TaskIt",
+    blurb:
+      "Turns a casual Slack message into a tracked GitHub issue — react to a message with 📌 or run /taskit, and it sends the text to Gemini with a prompt built for extraction (not summarization) into a strict { title, description, label } schema, then files a real GitHub issue and replies in-thread with the link. The Slack-side companion to DevCompass: same two backing services, used in the opposite direction, plus the Slack Bolt SDK for OAuth, event subscriptions, and slash commands. Built with the same production instincts — a partial (not sparse) MongoDB index so reaction-triggered and slash-command-triggered issues dedupe correctly instead of silently colliding, a trimmed CORS origin and scoped JSON error handler so a bad env var degrades gracefully instead of crashing, and Slack's 3-second ack requirement handled via an immediate acknowledgment followed by a response_url follow-up so a cold Render instance never looks like a failure.",
+  },
+  {
     name: "BLOGSITE",
     tags: "MICROSERVICES / KUBERNETES / RABBITMQ",
     stack: [
