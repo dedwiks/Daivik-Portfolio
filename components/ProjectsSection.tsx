@@ -19,8 +19,8 @@ export default function ProjectsSection() {
         <span>✦</span>
         <span>SELECTED WORKS</span>
       </div>
-      {projects.map((project) => (
-        <ProjectRow key={project.name} project={project} />
+      {projects.map((project, i) => (
+        <ProjectRow key={project.name} project={project} index={i} />
       ))}
       <div className={styles.closingBorder} />
     </Section>

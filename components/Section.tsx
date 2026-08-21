@@ -26,6 +26,7 @@ export default function Section({ id, gradient, noBorder, rail, contentClassName
     >
       <div
         ref={ref}
+        data-revealed={revealed}
         className={[styles.content, revealed ? styles.revealed : "", contentClassName || ""]
           .filter(Boolean)
           .join(" ")}

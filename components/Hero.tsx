@@ -40,8 +40,8 @@ export default function Hero() {
       </h1>
 
       <div className={styles.chips}>
-        {heroChips.map((chip) => (
-          <div key={chip} className={styles.chip}>
+        {heroChips.map((chip, i) => (
+          <div key={chip} className={styles.chip} style={{ transitionDelay: `${i * 50}ms` }}>
             {chip}
           </div>
         ))}
@@ -50,8 +50,10 @@ export default function Hero() {
       <p className={styles.bio}>{bio}</p>
 
       <div className={styles.log}>
-        {heroLog.map((line) => (
-          <div key={line}>{line}</div>
+        {heroLog.map((line, i) => (
+          <div className={styles.logLine} key={line} style={{ transitionDelay: `${150 + i * 50}ms` }}>
+            {line}
+          </div>
         ))}
       </div>
     </Section>

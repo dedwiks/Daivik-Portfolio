@@ -21,13 +21,13 @@ export default function ExperienceSection() {
       </div>
 
       <div className={styles.subLabel}>WORK</div>
-      {experience.map((entry) => (
-        <ExperienceRow key={entry.company} entry={entry} />
+      {experience.map((entry, i) => (
+        <ExperienceRow key={entry.company} entry={entry} index={i} />
       ))}
       <div className={styles.closingBorder} />
 
       <div className={styles.subLabelSpaced}>EDUCATION</div>
-      <div className={styles.eduRow}>
+      <div className={styles.eduRow} style={{ transitionDelay: `${experience.length * 60}ms` }}>
         <div className={styles.eduDates}>{education.dates}</div>
         <div>
           <div className={styles.eduRole}>{education.role}</div>

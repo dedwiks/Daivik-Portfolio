@@ -5,11 +5,11 @@ import type { Project } from "@/lib/data";
 import RepoStats from "./RepoStats";
 import styles from "./ProjectRow.module.css";
 
-export default function ProjectRow({ project }: { project: Project }) {
+export default function ProjectRow({ project, index = 0 }: { project: Project; index?: number }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} style={{ transitionDelay: `${index * 40}ms` }}>
       <button type="button" className={styles.row} aria-expanded={expanded} onClick={() => setExpanded((v) => !v)}>
         <div className={styles.name}>{project.name}</div>
         <div className={styles.meta}>

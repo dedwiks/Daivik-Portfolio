@@ -19,8 +19,8 @@ export default function SkillsSection() {
         <span>CORE STACK</span>
       </div>
       <div className={styles.grid}>
-        {skillGroups.map((group) => (
-          <div key={group.title}>
+        {skillGroups.map((group, i) => (
+          <div className={styles.group} key={group.title} style={{ transitionDelay: `${i * 40}ms` }}>
             <div className={styles.groupTitle}>{group.title}</div>
             <div className={styles.groupItems}>{group.items}</div>
           </div>
